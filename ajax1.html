@@ -1,0 +1,21 @@
+<html>
+<body>
+<h1>Ramya Dhulipalla</h1>
+<div id="demo">
+<p>New text will come here</p>
+<button onclick="myfun()">Try it</button>
+</div>
+<script>
+function myfun()
+{	
+	var xhttp= new XMLHttpRequest();
+	xhttp.onreadystatechange=function(){
+		if(this.readyState==4 && this.status==200){
+			document.getElementById("demo").innerHTML=this.responseText;}
+		};
+	xhttp.open("GET", "mytext.txt", true); 
+	xhttp.send();
+}
+</script>
+</body>
+</html>

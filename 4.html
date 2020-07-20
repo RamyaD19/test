@@ -1,0 +1,179 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="practise page">
+<meta name="keywords" content="HTML">
+<meta name="author" content="Ramya">
+<meta http-equiv="refresh" content="2000">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="1.html" target="_blank">
+<style>
+table#t1,th,td{
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 50%;
+	padding: 7px;
+}
+#t1 td{
+	text-align: center;
+}
+table#t1 tr:nth-child(even){
+	background-color: white;
+}
+#t1 tr:nth-child(odd){
+	background-color: lightgray;
+}
+#t1 th{
+	color: white;
+	background-color: midnightblue;
+}
+ul#nav {
+	list-style-type: none;
+	margin-right: 700px;
+	padding: 0;
+	overflow: hidden;
+	background-color: black;
+}
+#nav li {
+	float: left;
+}
+#nav li a {
+	display: block;
+	color: white;
+	padding: 10px;
+	text-decoration: none;
+}
+li a:hover, a:active {
+  background-color: green;
+}
+.cities{
+	background-color: blue;
+	color: white;
+	padding: 5px;
+	margin:5px;
+}
+.another{
+	text-align: center;}
+</style>
+</head>
+</style>
+</head>
+<body>
+<table id="t1">
+<tr>
+<th>Name</th>
+<th>Mobile No.</th>
+</tr>
+<tr>
+<td rowspan="2">Manikanta</td>
+<td>9493928294</td>
+</tr>
+<tr>
+<td>9573729690</td>
+</tr>
+<tr>
+<td colspan="2">Deepthi</td>
+</tr>
+<tr>
+<td>Ramya</td>
+<td>9493242398</td>
+</tr>
+<caption style="padding: 10px; font-size: 25px;"><b>Family details</b></caption>
+</table>
+<table style="width:50%; border-spacing: 5px;">
+<caption style="padding: 10px; font-size: 25px;"><b>Family details another copy</b></caption>
+<colgroup>
+<col span="1" style="background-color: aqua">
+<col span ="1" style="background-color: pink">
+<col style="background-color: powderblue">
+</colgroup>
+<tr>
+<th>Name</th>
+<th>Mobile No.</th>
+<th>Relation</th>
+</tr>
+<tr>
+<td rowspan="2">Manikanta</td>
+<td>9493928294</td>
+<td rowspan="2">sibling</td>
+</tr>
+<tr>
+<td>9573729690</td>
+</tr>
+<tr>
+<td colspan="2">Deepthi</td>
+<td>sibling</td>
+</tr>
+<tr>
+<td>Ramya</td>
+<td>9493242398</td>
+<td>sibling</td>
+</tr>
+</table>
+<ul>
+<li style="list-style-type: circle">Manikanta</li>
+<ul>
+<li>A good boy</li>
+<li>Smart fellow</li>
+</ul>
+<li style="list-style-type: disc">Deepthi</li>
+<li style="list-style-type: square">Ramya</li>
+<li style="list-style-type: none">Paryasri</li>
+</ul>
+<ul id="nav">
+<li><a href="2.html" target="_blank">HTML</a></li>
+<li><a href="">CSS</a></li>
+<li><a href="">Javascript</a></li>
+</ul>
+<ol start="50">
+<li type="1">one</li>
+<li  type="A">two</li>
+<li  type="a">three</li>
+<li  type="I">four</li>
+<li  type="i">five</li>
+</ol>
+<dl>
+<dt>Manikanta</dt>
+<dd>My brother</dd>
+<dd>Very nice guy</dd>
+<dt>Deepthi</dt>
+<dd>She is beautiful from in and out</dd>
+</dl>
+<div class="cities another">
+  <h2>London</h2>
+  <p>London is the capital of England.</p>
+</div>
+<div class="cities">
+  <h2>Paris</h2>
+  <p>Paris is the capital of France.</p>
+</div>
+<h1 id='id'>Good morning</h1>
+<button onclick="ok()">change text</button><br>
+<script>
+function ok(){
+	document.getElementById("id").innerHTML=("Have a nice day");
+	document.getElementById("id").style.fontSize = "25px";
+	document.getElementById("id").style.color = "red";
+	document.getElementById("id").style.backgroundColor = "yellow";	
+}
+function img(i){
+	var pic;
+	if(i==1)
+		pic="img/2.jpg";
+	else
+		pic="my.png";
+document.getElementById("image").src=pic;
+}
+</script>
+<noscript>Sorry, your browser is not suppot this type of format</noscript>
+<img src="my.png" id="image" style="width:400px; height: 400px" >
+<p><button type="button" onclick="img(1)">mypic</button>
+<button type="button" onclick="img(0)">homepic</button></p>
+<picture>
+<source srcset="1.png" media="(max-width: 475px)">
+<source srcset="my.png" media="(max-width: 1500px)">
+<img src="1.png" alt="Flowers" style="width:auto;">
+</picture>
+<h1 style="font-size: 10vw">viewport width</h1>
+</body>
+</html>
